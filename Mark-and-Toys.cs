@@ -14,7 +14,6 @@ using System;
 
 class Result
 {
-
     /*
      * Complete the 'maximumToys' function below.
      *
@@ -44,7 +43,6 @@ class Result
 
         return count;
     }
-
 }
 
 class Solution
