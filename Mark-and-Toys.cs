@@ -26,6 +26,23 @@ class Result
 
     public static int maximumToys(List<int> prices, int k)
     {
+        int count = 0;
+        long total = 0;
+
+        prices.Sort();
+
+        int pricesSize = prices.Count;
+        for (int i = 0; i < pricesSize; ++i)
+        {
+            total += prices[i];
+            
+            if (total <= k)
+            {
+                count++;
+            }
+        }
+
+        return count;
     }
 
 }
