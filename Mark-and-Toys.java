@@ -22,6 +22,23 @@ class Result {
      */
 
     public static int maximumToys(List<Integer> prices, int k) {
+        int count = 0;
+        long total = 0;
+
+        Collections.sort(prices);
+
+        int pricesSize = prices.size();
+        for (int i = 0; i < pricesSize; ++i)
+        {
+            total += prices.get(i);
+            
+            if (total <= k)
+            {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
 
